@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>色辨遊戲終極版</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-family: 'Noto Sans', sans-serif;
+      }
+
+      #container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: grey;
+      }
+
+      #cube-box {
+        width: 500px;
+        height: 500px;
+        background-color: #ddd;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 8;
+      }
+      .cube {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        margin: 3px;
+        cursor: pointer;
+      }
+      .pale {
+        opacity: 0.5;
+      }
+      .box {
+        width: 140px;
+        background-color: yellow;
+        border: 3px solid black;
+        padding: 10px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .circle {
+        width: 60px;
+        height: 60px;
+        background-color: #ddd;
+        border-radius: 50%;
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+      }
+
+      #get-score {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-300%);
+      }
+      #count-down {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(200%);
+      }
+      .btn {
+        width: 200px;
+        background-color: yellow;
+        border: 3px solid black;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      #play-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-170%);
+      }
+      #pause-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #continue-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(70%);
+      }
+      #instructions {
+        width: 500px;
+        height: 100px;
+        background-color: #ddd;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      h2 {
+        margin: 0;
+      }
+      #seconds,
+      #score {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="container">
+      <div id="get-score" class="box">
+        <h3>得分</h3>
+        <h3>score</h3>
+        <div class="circle"><span id="score">0</span></div>
+      </div>
+      <div id="count-down" class="box">
+        <h3>倒數</h3>
+        <h3>countdown</h3>
+        <div class="circle">
+          <span id="seconds">60</span>
+        </div>
+      </div>
+      <div>
+        <button id="play-btn" class="btn" type="button" value="begin">
+          開始玩 play
+        </button>
+      </div>
+      <div>
+        <button id="pause-btn" class="btn" type="button" value="stop">
+          暫停 pause
+        </button>
+      </div>
+      <div>
+        <button id="continue-btn" class="btn" type="button" value="continue">
+          繼續玩 continue
+        </button>
+      </div>
+
+      <div id="cube-box"></div>
+      <div id="instructions">
+        <h2>免費色弱測試</h2>
+        <h2>The Colors！</h2>
+        <h2>找出顏色不一樣的方塊</h2>
+        <h2>click the squares with different colors</h2>
+      </div>
+    </section>
+
+    <script>
+      // 有計分器及計時器，60秒倒數，時間到則跳出恭喜並顯示獲得幾分，並重頭開始遊戲
+
+      const cubeBox = document.querySelector('#cube-box');
+      const score = document.querySelector('#score');
+      const seconds = document.querySelector('#seconds');
+      const playBtn = document.querySelector('#play-btn');
+      const pauseBtn = document.querySelector('#pause-btn');
+      const continueBtn = document.querySelector('#continue-btn');
+      //全域函數
+      let level = 0;
+      let timeLeft = 60; //倒數計時
+      let countdown = null; //計時器
+      let gameRunning = false;
+      let clickEnabled = true; // 控制是否可以點擊方塊
+      //開始頁面禁用暫停和繼續
+      pauseBtn.disabled = true;
+      continueBtn.disabled = true;
+      // 設置遊戲開始
+      function startGame() {
+        if (gameRunning) return; // 如果遊戲已經在運行，則不重複啟動
+        gameRunning = true;
+        //button內建屬性應用 disabled
+        playBtn.disabled = true;
+        pauseBtn.disabled = false;
+        continueBtn.disabled = true; // 初始時將繼續玩按鈕禁用
+        countdown = setInterval(updateTimer, 1000);
+        creatCube();
+      }
+
+      // 停止遊戲
+      function stopGame() {
+        gameRunning = false;
+        clearInterval(countdown);
+        playBtn.disabled = true;
+        pauseBtn.disabled = true;
+        continueBtn.disabled = false;
+        clickEnabled = false; // 暫停時禁止點擊方塊
+      }
+
+      // 繼續遊戲
+      function continueGame() {
+        if (gameRunning) return; // 如果遊戲已經在運行，則不重複啟動
+        gameRunning = true;
+        playBtn.disabled = true;
+        pauseBtn.disabled = false;
+        continueBtn.disabled = true;
+        countdown = setInterval(updateTimer, 1000);
+      }
+      //重置遊戲
+      function resetGame() {
+        clearInterval(countdown);
+        gameRunning = false;
+        clickEnabled = true;
+        level = 0;
+        timeLeft = 60; // 重置倒數時間
+        score.textContent = '0';
+        seconds.textContent = timeLeft;
+        playBtn.disabled = false;
+        pauseBtn.disabled = true;
+        continueBtn.disabled = true;
+        cubeBox.innerHTML = ''; // 清空現有方塊
+      }
+
+      //計時器
+      function updateTimer() {
+        if (timeLeft === 0) {
+          stopGame();
+          alert('時間到囉！');
+          resetGame();
+        } else {
+          timeLeft--;
+          seconds.textContent = timeLeft;
+        }
+      }
+
+      //生成方塊
+      function creatCube() {
+        if (!gameRunning) return;
+
+        let gridSize = 2;
+        if (level <= 1) {
+          gridSize = 2;
+        } else if (level <= 4) {
+          gridSize = 3;
+        } else if (level <= 8) {
+          gridSize = 4;
+        } else if (level <= 13) {
+          gridSize = 5;
+        } else if (level <= 18) {
+          gridSize = 6;
+        } else if (level <= 25) {
+          gridSize = 7;
+        } else if (level <= 33) {
+          gridSize = 8;
+        }
+
+        const totalCubes = gridSize * gridSize;
+        const randomIndex = Math.floor(Math.random() * totalCubes) + 1;
+
+        //rgb：0~200之間
+        const red = Math.floor(Math.random() * 201);
+        const green = Math.floor(Math.random() * 201);
+        const blue = Math.floor(Math.random() * 201);
+        const randomColor = `rgb(${red}, ${green}, ${blue})`;
+
+        let content = '';
+        //需要調整 考慮使用grid
+        let cubeWidth = (480 - gridSize * 6) / gridSize;
+        let cubeHeight = (480 - gridSize * 6) / gridSize;
+        for (let i = 1; i <= totalCubes; i++) {
+          let cubeClass = 'cube';
+          if (i === randomIndex) {
+            cubeClass += ' pale';
+          }
+
+          content += `<div 
+          class="${cubeClass}" 
+          style="
+          width: ${cubeWidth}px; 
+          height: ${cubeHeight}px; 
+          background-color: ${randomColor}">
+          </div>`;
+        }
+
+        cubeBox.innerHTML = content;
+        //呼叫函式  呼叫綁定事件的函式
+        clickAnswerEvent();
+      }
+
+      //點擊答案方塊並彈出恭喜
+      function clickAnswerEvent() {
+        if (!gameRunning) return;
+
+        const answerCube = document.querySelector('.pale');
+        answerCube.addEventListener('click', function () {
+          if (!gameRunning) return; // 遊戲暫停時不處理點擊事件
+          score.textContent = level + 1;
+          //完成第8關後跳出恭喜過關提示，並重頭開始遊戲
+          if (level === 29) {
+            stopGame()
+            // 延遲顯示恭喜過關
+            setTimeout(function () {
+              alert('恭喜通過30關~~');
+            }, 1000);
+            resetGame();
+          } else {
+            // alert('答對了!');
+            level++;
+          }
+
+          //呼叫函式
+          // 重新生一次新的方塊
+          creatCube();
+        });
+      }
+
+      // 開始按鈕點擊事件
+      playBtn.addEventListener('click', startGame);
+      // 暫停按鈕點擊事件
+      pauseBtn.addEventListener('click', stopGame);
+      // 繼續按鈕點擊事件
+      continueBtn.addEventListener('click', continueGame);
+      // 初始化倒計時顯示
+      seconds.textContent = timeLeft;
+
+      //js轉跳指定網址
+      // window.location.href =''
+    </script>
+  </body>
+</html>

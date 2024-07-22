@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>猜拳遊戲</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body{
+        width: 100%;
+        height: 100vh;
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+      }
+      .outer-container {
+        width: 500px;
+        border: 4px dashed orangered;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+      }
+      .container {
+        margin-bottom: 20px;
+      }
+      .form {
+        margin: auto;
+      }
+
+      .btn {
+        font-size: 50px;
+        padding: 5px 10px;
+        border: 2px solid red;
+        border-radius: 10px;
+        background-color: rgb(248, 203, 238);
+      }
+
+      input[type='radio']:checked + label {
+        border: 2px solid blue;
+        background-color: aqua;
+      }
+
+      #submit-btn {
+        width: 100%;
+        background-color: aqua;
+        color: blue;
+        border: 2px solid blue;
+        border-radius: 10px;
+        font-size: 30px;
+        padding: 5px 10px;
+      }
+      #submit-btn:focus {
+        background-color: yellow;
+      }
+      .emoji {
+        font-size: 30px;
+      }
+      p{
+        font-size: 20px;
+        padding-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-container">
+      <form class="form">
+        <div class="container">
+          <input type="radio" id="sissor" name="guess" value="1" hidden />
+          <label for="sissor" class="btn">✌️</label>
+
+          <input type="radio" id="stone" name="guess" value="2" hidden />
+          <label for="stone" class="btn">✊</label>
+
+          <input type="radio" id="paper" name="guess" value="3" hidden />
+          <label for="paper" class="btn">🖐️</label>
+        </div>
+
+        <button id="submit-btn" type="button">確認出拳</button>
+        <!-- button要不要放在form裡面都可以，後面寫的方式會不一樣 -->
+      </form>
+
+      <p>👤我方：<span id="my-choice" class="emoji"></span></p>
+      <p>🤖電腦：<span id="pc-choice" class="emoji"></span></p>
+      <p>🏆對決結果：<span id="final-result" class="emoji"></span></p>
+    </div>
+    <script>
+      //innerHTML vs textcontent
+      //innerHTML比較危險，因為會打開包裹轉換成html，包裹內容可能會被掉包，必要才使用
+      //樣本字串 使用時機：變數+字串 ; 變數+變數
+      const submitBtn = document.querySelector('#submit-btn');
+      const myChoice = document.querySelector('#my-choice');
+      const pcChoice = document.querySelector('#pc-choice');
+      const finalResult = document.querySelector('#final-result');
+      //點擊後的監聽事件
+      submitBtn.addEventListener('click', function () {
+        const selectedRadio = document.querySelector(
+          'input[name="guess"]:checked'
+        );
+        // !selectedRadio 判斷是否 null、undefined 或 false
+        if (!selectedRadio) {
+          alert('請出拳');
+        } else {
+          const myValue = Number(selectedRadio.value);
+          //找label的值
+          myChoice.textContent = selectedRadio.nextElementSibling.textContent;
+          //const 已經賦予他隨機值
+          // let 拿來重新賦值
+
+          //隨機1-3的數字(備註給同事主管看，方便code review)
+          const pcValue = Math.floor(Math.random() * 3) + 1;
+          
+
+          if (pcValue === 1) {
+            pcChoice.textContent = '✌️';
+          } else if (pcValue === 2) {
+            pcChoice.textContent = '✊';
+          } else {
+            pcChoice.textContent = '🖐️';
+          }
+
+          let result = '';
+          //判斷式的順序 會影響效率
+          if (myValue === pcValue) {
+            result = '平手';
+            finalResult.style.color = 'blue';
+          } else if (
+            (myValue === 1 && pcValue === 3) ||
+            (myValue === 2 && pcValue === 1) ||
+            (myValue === 3 && pcValue === 2)
+          ) {
+            result = '我方勝利';
+            finalResult.style.color = 'red';
+          } else {
+            result = '電腦勝利';
+            finalResult.style.color = 'green';
+          }
+          finalResult.textContent = result;
+
+          // radio input清空
+          //input.checked = false 清除選擇狀態。
+        document.querySelectorAll('input[name="guess"]').forEach(input => {
+            input.checked = false; });
+        }
+      });
+    </script>
+    <script></script>
+  </body>
+</html>
