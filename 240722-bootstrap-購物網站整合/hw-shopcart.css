@@ -1,0 +1,149 @@
+.w-100 {
+    width: 100%;
+  }
+  .my-p {
+    margin: 0;
+  }
+
+  .my-circle {
+    width: 40px;
+    height: 40px;
+  }
+  @media (max-width: 575px) {
+    .my-circle {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .my-main {
+    @media (max-width: 575px) {
+      padding: 5%;
+    }
+  }
+  .my-text-center {
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .my-circle-box {
+    position: relative;
+    padding-bottom: 5px;
+  }
+  .my-progress-bar {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-45%, -50%);
+  }
+  @media (max-width: 991px) {
+    .my-progress-bar {
+      transform: translate(-40%, -50%);
+    }
+  }
+  @media (max-width: 767px) {
+    .my-progress-bar {
+      transform: translate(-35%, -50%);
+    }
+  }
+  @media (max-width: 575px) {
+    .my-progress-bar {
+      transform: translate(-30%, -50%);
+    }
+  }
+  @media (max-width: 375px) {
+    .my-progress-bar {
+      width: 90%;
+      transform: translate(-25%, -50%);
+    }
+  }
+  .order-finish {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+  }
+
+  /* login頁面 */
+
+  .my-100vh {
+    height: 100vh;
+  }
+  .my-80vh {
+    height: 80vh;
+  }
+  .my-text-box {
+    width: 100%;
+    height: 100%;
+  }
+  #login-form {
+    width: 40%;
+    top: 50%;
+    left: 75%;
+    transform: translate(-45%, -50%); 
+  }
+  @media (max-width:767px) {
+  #login-form {
+    width: 80%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }  
+  }
+  #login-info {
+    background-image: url(https://images.chinatimes.com/newsphoto/2020-03-25/1024/B22A00_P_02_02.jpg);
+    background-size: cover;
+    filter: grayscale(100%); 
+  }
+
+  /* 首頁頁面 */
+  .my-commentbox {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+  .my-color-ball {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+  .bg-img-cover {
+    width: 100%;
+    height: 100%;
+    background-image: cover;
+  }
+
+  .h-100 {
+    height: 100%;
+  }
+  .w-h-200 {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .my-star, .my-star-2 {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    position: absolute;
+    top: 20%;
+    left: 0;
+  }
+  .about-me {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl1UIUxa7INqUG9LHU2PC07TXgjGOz_3wnmg&s);
+  }
+ 

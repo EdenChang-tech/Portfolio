@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>shopping cart-4</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./hw-shopcart.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-info-subtle">
+      <div class="container">
+        <a class="navbar-brand ps-3" href="#">
+          <img
+            src="./img/bee.jpg"
+            alt="Logo"
+            width="30"
+            height="30"
+            style="border-radius: 50%"
+            class="d-inline-block align-text-top"
+          />
+          回巢選材
+        </a>
+        <!-- 漢堡條 -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./hw-homepage有特效.html#new-info">最新消息</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./hw-homepage有特效.html#about-me">關於回巢</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./hw-homepage有特效.html#contact-us">聯絡回巢</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">購物商城</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-cart3"></i></a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-circle"></i>
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">登入</a></li>
+                <!-- <li><a class="dropdown-item" href="#">會員資料查詢</a></li>
+                <li><a class="dropdown-item" href="#">登出</a></li> -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="my-main bg-info py-5">
+      <div class="container bg-info-subtle px-sm-5 py-3">
+        <h2>購物車</h2>
+        <hr />
+        <section class="my-progress row py-3">
+          <div class="big-box col-3">
+            <div class="my-circle-box">
+              <div
+                class="rounded-circle mx-auto my-circle bg-info border py-sm-3 d-flex justify-content-center align-items-center"
+              >
+                <div class="fs-6">1</div>
+              </div>
+
+              <div class="px-1 my-progress-bar">
+                <div class="progress">
+                  <div
+                    class="progress-bar bg-info"
+                    role="progressbar"
+                    style="width: 100%"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="intro fs-6 text-center">確認購物車</div>
+          </div>
+
+          <div class="big-box col-3">
+            <div class="my-circle-box">
+              <div
+                class="rounded-circle mx-auto my-circle bg-info border py-sm-3 d-flex justify-content-center align-items-center"
+              >
+                <div class="fs-6">2</div>
+              </div>
+
+              <div class="px-1 my-progress-bar">
+                <div class="progress">
+                  <div
+                    class="progress-bar bg-info"
+                    role="progressbar"
+                    style="width: 100%"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="intro fs-6 text-center">付款與運送方式</div>
+          </div>
+
+          <div class="big-box col-3">
+            <div class="my-circle-box">
+              <div
+                class="rounded-circle mx-auto my-circle bg-info border py-sm-3 d-flex justify-content-center align-items-center"
+              >
+                <div class="fs-6">3</div>
+              </div>
+
+              <div class="px-1 my-progress-bar">
+                <div class="progress">
+                  <div
+                    class="progress-bar bg-info"
+                    role="progressbar"
+                    style="width: 100%"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="intro fs-6 text-center">填寫資料</div>
+          </div>
+
+          <div class="big-box col-3">
+            <div class="my-circle-box">
+              <div
+                class="rounded-circle mx-auto my-circle bg-info border py-sm-3 d-flex justify-content-center align-items-center"
+              >
+                <div class="fs-6">4</div>
+              </div>
+
+              <div class="px-3">
+                <div></div>
+              </div>
+            </div>
+            <div class="intro fs-6 text-center">完成訂購</div>
+          </div>
+        </section>
+
+        <hr />
+        <h2 class="order-finish">訂單完成</h2>
+        <section class="cart-list">
+          <h2 class="pb-3">訂單明細</h2>
+          <section class="row d-flex justify-content-center align-items-center">
+            <div class="col-3 col-md-2 col-lg-1">
+              <img class="w-100 rounded-4" src="./img/firelight.jpg" alt="" />
+            </div>
+            <div class="col direction">
+              <div class="fs-6 ps-0">
+                <p class="fs-sm-5 my-p">LED出口標示燈</p>
+                <p class="fs-6 my-p">型號： EE-03</p>
+              </div>
+            </div>
+
+            <div class="col-3 col-sm-2 col-xxl-1 my-number p-0">
+             x1
+            </div>
+            <div class="col-2 col-md-2 col-xxl-1 my-price ps-3 text-start">
+              <div class="fs-6">NT. 400</div>
+            </div>
+          </section>
+          <hr />
+          <section class="row d-flex justify-content-center align-items-center">
+            <div class="col-3 col-md-2 col-lg-1">
+              <img class="w-100 rounded-4" src="./img/fireex.webp" alt="" />
+            </div>
+            <div class="col direction">
+              <div class="fs-6 ps-0">
+                <p class="fs-sm-5 my-p">手提蓄壓式乾粉滅火器</p>
+                <p class="fs-6 my-p">型號： 10型</p>
+              </div>
+            </div>
+
+            <div class="col-3 col-sm-2 col-xxl-1 my-number p-0">
+              x1
+            </div>
+            <div class="col-2 col-md-2 col-xxl-1 my-price ps-3 text-start">
+              <div class="fs-6">NT. 1200</div>
+            </div>
+          </section>
+          <hr />
+          <section class="row d-flex justify-content-center align-items-center">
+            <div class="col-3 col-md-2 col-lg-1">
+              <img class="w-100 rounded-4" src="./img/fireset.jpg" alt="" />
+            </div>
+            <div class="col direction">
+              <div class="fs-6 ps-0">
+                <p class="fs-sm-5 my-p">滅火器放置架</p>
+                <p class="fs-6 my-p">型號： 174803</p>
+              </div>
+            </div>
+
+            <div class="col-3 col-sm-2 col-xxl-1 my-number p-0">
+             x1
+            </div>
+            <div class="col-2 col-md-2 col-xxl-1 my-price ps-3 text-start">
+              <div class="fs-6">NT. 800</div>
+            </div>
+          </section>
+          <hr />
+          <section>
+            <h2 class="pb-3">寄送地址</h2>
+            <p class="pb-3 fs-5">姓名：<span>王曉明</span></p>
+            <p class="pb-3 fs-5">連絡電話：<span>0955888555</span></p>
+            <p class="pb-3 fs-5">Email：<span>ex@gmail.com</span></p>
+            <p class="pb-3 fs-5">地址：<span> 540南投縣南投市虎山路3號</span></p>
+          </section>
+          <hr>
+          <section class="my-cal">
+            <div class="row justify-content-end">
+              <div class="col-4 col-md-2 col-xxl-1 text-center">數量：</div>
+              <div class="col-4 col-md-2 col-xxl-1 text-start">3</div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-4 col-md-2 col-xxl-1 text-center">小計：</div>
+              <div class="col-4 col-md-2 col-xxl-1 text-start">NT. 2400</div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-4 col-md-2 col-xxl-1 text-center">運費：</div>
+              <div class="col-4 col-md-2 col-xxl-1 text-start">NT. 70</div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="col-4 col-md-2 col-xxl-1 text-center">總計：</div>
+              <div class="col-4 col-md-2 col-xxl-1 text-start">NT. 2470</div>
+            </div>
+          </section>
+
+          <hr />
+          <section class="d-flex justify-content-end">
+            <a class="btn btn-primary fw-bold px-4" href="./hw-homepage有特效.html" role="button"
+              >返回首頁</a
+            >
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-info-subtle">
+      <div class="container">
+        <section
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-5 pt-5 border-top"
+        >
+          <div class="col col-md-12 mb-3">
+            <a
+              href="#"
+              class="d-flex align-items-center justify-content-center mb-3 link-body-emphasis text-decoration-none"
+            >
+            <img
+            src="./img/bee.jpg"
+            alt="Logo"
+            width="50"
+            height="50"
+            style="border-radius: 50%"
+            class="d-inline-block align-text-top me-3"
+          />
+            </a>
+            <p class="text-body-secondary text-center">回巢選材</p>
+            <p class="text-body-secondary text-center">一起組建家</p>
+          </div>
+
+          <div class="col mb-3 text-center">
+            <h5>關於回巢</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >最新消息</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >得獎紀錄</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >案例分享</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >小達人體驗營</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3 text-center">
+            <h5>商品項目</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >建材與地材</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >消防器材</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >牆面與軟裝</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >磁磚與薄板</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >廚具與衛浴</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3 text-center">
+            <h5>工項資訊</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >泥做工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >木作工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >水電工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >磁磚工程</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3 text-center">
+            <h5>工項資訊</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >壁紙工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >油漆工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >貼膜工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >玻璃工程</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="container-fluid bg-info pt-3">
+        <div class="container">
+          <section class="row">
+            <div class="co-12 mb-1 ps-3">
+              <h5 class="my-text-center justify-content text-center">
+                聯絡我們 Contact Us
+              </h5>
+              <ul class="nav justify-content-evenly text-start">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link px-2 text-body-secondary"
+                    >地址：100223臺北市中正區寶慶路3號</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link px-2 text-body-secondary"
+                    >TEL：02-2316-5300&nbsp;&nbsp;&nbsp;FAX：02-2316-5300</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link px-2 text-body-secondary"
+                    >服務時間：上班日8:00至18:00</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link px-2 text-body-secondary"
+                    >信箱：bee-materials@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section
+            class="d-flex flex-wrap justify-content-between align-items-center py-1 border-top"
+          >
+            <div class="col-8 col-lg-4 d-flex align-items-center">
+              <a
+                href="/"
+                class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+              >
+                <svg class="bi" width="30" height="24"></svg>
+              </a>
+              <span class="mb-3 mb-md-0 text-body-secondary"
+                >&copy; 2024 Bee-Materials Co., Ltd.</span
+              >
+            </div>
+
+            <ul
+              class="nav col-4 col-lg-4 justify-content-end list-unstyled d-flex"
+            >
+              <li class="ms-3">
+                <a class="text-body-secondary" href="#"
+                  ><svg class="bi" width="24" height="24">
+                    <i class="bi bi-twitter"></i></svg
+                ></a>
+              </li>
+              <li class="ms-3">
+                <a class="text-body-secondary" href="#"
+                  ><svg class="bi" width="24" height="24">
+                    <i class="bi bi-instagram"></i></svg
+                ></a>
+              </li>
+              <li class="ms-3">
+                <a class="text-body-secondary" href="#"
+                  ><svg class="bi" width="24" height="24">
+                    <i class="bi bi-facebook"></i></svg
+                ></a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>首頁</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="./hw-shopcart.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-info-subtle">
+      <div class="container">
+        <a class="navbar-brand ps-3" href="#">
+          <img
+            src="./img/bee.jpg"
+            alt="Logo"
+            width="30"
+            height="30"
+            style="border-radius: 50%"
+            class="d-inline-block align-text-top"
+          />
+          回巢選材
+        </a>
+        <!-- 漢堡條 -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">最新消息</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">關於回巢</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">聯絡回巢</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">購物商城</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./hw-shopcart-1.html"
+                ><i class="bi bi-cart3"></i
+              ></a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-circle"></i>
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="./hw-login.html">登入</a>
+                </li>
+                <!-- <li><a class="dropdown-item" href="#">會員資料查詢</a></li>
+                <li><a class="dropdown-item" href="#">登出</a></li> -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <!-- 大圖 -->
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="http://www.i-tser.com.tw/data/adv/201801/1516947222996208870.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="http://www.i-tser.com.tw/data/adv/201801/1516934167764932555.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="http://www.i-tser.com.tw/data/adv/201801/1516946978925677185.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <!-- 關於公司 -->
+        <section class="p-3 p-sm-5 about-me mt-5" id="about-me">
+          <h2 class="text-center mb-3 bg-light-subtle p-2">關於回巢</h2>
+          <div class="info-text-area text-center bg-light-subtle p-2">
+            <p>空間 是個多元多面向的有機體</p>
+            <p>設計 不妨視為揣想生活的積極態度</p>
+            <p>我們有一系列可以根據不同客層需求</p>
+            <p>逐一量身訂做的服務流程</p>
+            <p>公開而且透明</p>
+            <p>不管您對家有任何想法</p>
+            <p>我們都準備好隨時傾聽</p>
+            <p>期待有機會與您一起編寫關於『家』的精彩故事</p>
+          </div>
+        </section>
+        <!-- 三張卡 -->
+        <section class="row p-3 p-sm-5">
+          <h2 class="text-center">藝術壁版系列</h2>
+          <div
+            class="col-12 col-lg-4 py-5 d-flex align-items-center flex-column"
+          >
+            <div class="mb-3">
+              <img
+                class="rounded-circle"
+                src="https://ufileweb.hiwinner.tw/HiperShop/rwd1230/store/F4/DA27_C01.jpg"
+                width="200"
+                height="200"
+                alt=""
+              />
+            </div>
+            <h3 class="intro">康柏纖泥板</h3>
+            <h6 class="intro-text py-2">
+              松木絲與波特蘭水泥的絕佳融合(Comb康柏)
+            </h6>
+            <a href="#" style="text-decoration: none"
+              >看更多&nbsp;<i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div
+            class="col-12 col-lg-4 py-5 d-flex align-items-center flex-column"
+          >
+            <div class="mb-3">
+              <img
+                class="rounded-circle"
+                src="https://www.efcl.com.tw/rwd1230/store/F4/CB12119559535-MC.png"
+                width="200"
+                height="200"
+                alt=""
+              />
+            </div>
+            <h4 class="intro">好樂地輕質文化石</h4>
+            <h6 class="intro-text py-2">
+              無須動用泥作，簡單快速就能輕鬆完成文化石造型牆。
+            </h6>
+            <a href="#" style="text-decoration: none"
+              >看更多&nbsp;<i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div
+            class="col-12 col-lg-4 py-5 d-flex align-items-center flex-column"
+          >
+            <div class="mb-3">
+              <img
+                class="rounded-circle"
+                src="https://ufileweb.hiwinner.tw/HiperShop/rwd1230/store/F1/Royal-mud11.jpg"
+                width="200"
+                height="200"
+                alt=""
+              />
+            </div>
+            <h4 class="intro">御禾風清水模牆板</h4>
+            <h6 class="intro-text py-2">
+              高貴不貴，最快速享有清水模牆色澤、質感與造型的最佳建材。
+            </h6>
+            <a href="#" style="text-decoration: none"
+              >看更多&nbsp;<i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <a class="btn btn-primary" href="#" role="button">Link Button</a>
+          </div>
+        </section>
+        <!-- 圖片組合區 -->
+        <section class="row p-3 p-sm-5">
+          <div class="col-12">
+            <div class="row mb-4">
+              <h2 class="col-12 col-md-4 text-center">防火綠建材</h2>
+              <div class="col-12 col-md-8 fs-6">
+                各式防火建材、耐燃一級防火板，矽酸鈣板、纖維水泥板、石膏平板、輕鋼架天花板、輕鋼架隔間骨料、岩棉、玻璃棉...等
+              </div>
+            </div>
+            <div class="row g-0">
+              <div class="col-6">
+                <div class="p-1 bg-info">
+                  <div class="row g-1">
+                    <div class="col-6">
+                      <div class="p-1 bg-info-subtle">
+                        <img
+                          class="w-100 h-100 object-fit-cover"
+                          src="https://ufileweb.hiwinner.tw/HiperShop/rwd1230/store/F2/BA19_230524-2.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="p-1 bg-info-subtle">
+                        <img
+                          class="w-100 h-100 object-fit-cover"
+                          src="https://ufileweb.hiwinner.tw/HiperShop/rwd1230/store/F2/BA19_230524-1.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="p-1 bg-info-subtle">
+                        <img
+                          class="w-100 h-100 object-fit-cover"
+                          src="https://ufileweb.hiwinner.tw/HiperShop/rwd1230/store/F2/BA19_230524-3.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-1 bg-danger">
+                  <div class="row g-1">
+                    <div class="col-12">
+                      <div class="p-1 bg-danger-subtle">
+                        <img
+                          class="w-100 h-100 object-fit-cover"
+                          src="https://ufileweb.hiwinner.tw/HiperShop/rwd1230/store/F2/BA19_230524-5.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="p-1 bg-danger-subtle">
+                        <img
+                          class="w-100 h-100 object-fit-cover"
+                          src="https://ufileweb.hiwinner.tw/HiperShop/rwd1230/store/F2/BA19_230524-3.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="p-1 bg-danger-subtle">
+                        <img
+                          class="w-100 h-100 object-fit-cover"
+                          src="https://ufileweb.hiwinner.tw/HiperShop/rwd1230/store/F2/BA19_230524-2.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 價格表 -->
+        <section class="p-3 p-sm-5">
+          <div class="px-5 d-flex align-items-center flex-column">
+            <h2 class="intro">消防設備</h2>
+            <h6 class="intro-text py-2">
+              各類滅火器 / 停電自動照明燈 / 各式逃生設備經銷
+            </h6>
+          </div>
+          <div class="table-responsive px-sm-5">
+            <table class="table text-center">
+              <thead class="table-secondary">
+                <tr>
+                  <th style="width: 25%">產品型號</th>
+                  <th style="width: 25%">本體材質</th>
+                  <th style="width: 25%">空瓶重量(kg)</th>
+                  <th style="width: 25%">總重量(kg)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="text-start">DH-R-3</th>
+                  <td>冷軋鋼板</td>
+                  <td>900g</td>
+                  <td>1.9kg</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">DH-R-10</th>
+                  <td>冷軋鋼板</td>
+                  <td>2kg</td>
+                  <td>5kg</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">DH-S-3</th>
+                  <td>SUS304 不鏽鋼板</td>
+                  <td>1kg</td>
+                  <td>2kg</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="text-start">DH-S-10</th>
+                  <td>SUS304 不鏽鋼板</td>
+                  <td>2kg</td>
+                  <td>5kg</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="d-flex justify-content-between px-5">
+            <a href="#" style="text-decoration: none"
+              >看更多&nbsp;<i class="bi bi-arrow-right"></i
+            ></a>
+            <a class="btn btn-primary" href="#" role="button">Link Button</a>
+          </div>
+        </section>
+        <!-- 四張卡片 -->
+        <section class="p-3 p-sm-5">
+          <div class="row mb-4">
+            <h2 class="intro col-12 col-md-6 text-center">手工原木家具</h2>
+            <div class="intro-text col-12 col-md-6 fs-6">
+              選自歐洲進口的寬板厚原木家具，原木100%取材於歐洲環保認證永續森林，不僅供應穩定，而且每片寬板厚木，結合了百年手刮工藝，保有原木家具特色外，將平凡的你變得不平凡，呈現出超越粗獷工業風的極簡俐落，在舒適有型之外，更具有獨一無二的個性態度。
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  class="p-2"
+                  src="https://www.ikea.com/au/en/images/products/ingatorp-ingolf-table-and-6-chairs-white-white-hallarp-beige__1097686_pe865075_s5.jpg?f=xxs"
+                  alt=""
+                />
+                <div class="card-body">
+                  <p class="card-title fs-3">INGATORP / INGOLF</p>
+                  <p class="card-text fs-6">Table and 6 chairs, 155/215 cm</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  class="p-2"
+                  src="https://www.ikea.com/au/en/images/products/pinntorp-stefan-table-and-2-chairs-light-brown-stained-white-stained-white__1258466_pe926339_s5.jpg?f=xxs"
+                  alt=""
+                />
+                <div class="card-body">
+                  <p class="card-title fs-3">PINNTORP / STEFAN</p>
+                  <p class="card-text fs-6">Table and 2 chairs, 67/124 cm</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  class="p-2"
+                  src="https://www.ikea.com/au/en/images/products/skansnaes-lisabo-table-and-4-chairs-light-beech-veneer-ash__1292882_pe935109_s5.jpg?f=xxs"
+                  alt=""
+                />
+                <div class="card-body">
+                  <p class="card-title fs-3">SKANSNÄS / LISABO</p>
+                  <p class="card-text fs-6">Table and 4 chairs, 115/170 cm</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  class="p-2"
+                  src="https://www.ikea.com/au/en/images/products/ekedalen-ekedalen-table-and-6-chairs-dark-brown-dark-brown-orrsta-light-grey__1097432_pe864943_s5.jpg?f=xxs"
+                  alt=""
+                />
+                <div class="card-body">
+                  <p class="card-title fs-3">EKEDALEN / EKEDALEN</p>
+                  <p class="card-text fs-6">Table and 6 chairs, 120/180 cm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 三張橫向圖文 -->
+        <section class="p-3 p-sm-5">
+          <h2 class="text-center">木地板系列</h2>
+          <section class="row py-1 px-lg-5">
+            <div
+              class="col-12 col-md-4 d-flex justify-content-center align-items-center"
+            >
+              <img
+                class="p-5 w-h-200"
+                src="https://sinpin1.com.tw/asset/images/item/uploaded/20221010161736_16653898566343d5209ffb12.88953662.webp"
+                alt=""
+              />
+            </div>
+            <div
+              class="col-12 col-md-8 d-flex flex-column justify-content-center mb-3 mb-md-0 ps-5"
+            >
+              <h3 class="1h-1">海島型超耐磨木地板</h3>
+              <p class="fs-6">
+                海島型結構基底，適合台灣多變氣候，超耐磨地板表面層為美耐板貼皮耐磨塗料，
+                擁有耐磨、防潮、容易清理維護等優點，木紋由工印刷無色差，
+                底材有分為多層夾板合成，夾板式的與海島型木地板相同，穩定度高，卡榫式相接
+                ，平舖或架高施工時可以下釘。
+              </p>
+            </div>
+          </section>
+          <hr />
+          <section class="row py-1 px-lg-5">
+            <div
+              class="col-12 col-md-4 order-md-2 d-flex justify-content-center align-items-center"
+            >
+              <img
+                class="p-5 w-h-200"
+                src="https://sinpin1.com.tw/asset/images/item/uploaded/20230327225647_16799290076421aeafe0e6c8.43277488.webp"
+                alt=""
+              />
+            </div>
+            <div
+              class="col-12 col-md-8 d-flex flex-column justify-content-center mb-3 mb-md-0 ps-5 order-md-1"
+            >
+              <h3 class="1h-1">SPC石塑超耐磨防水地板</h3>
+              <p class="fs-6">
+                SPC石塑卡扣式防水地板(Stone plactic composite)，新型環保型地板
+                ，具有零甲醛、防黴、防潮、防焰、防蟲。
+                由石粉一次性加熱貼合、壓紋的產品。使用環保配方，不含重金屬、鄰苯二甲酸酯、甲醇等有害物質。
+                在歐美等發展國家廣受歡迎。穩定性和耐用性佳，解決木地板材料的甲醛問題。
+              </p>
+            </div>
+          </section>
+          <hr />
+          <section class="row py-1 px-lg-5">
+            <div
+              class="col-12 col-md-4 d-flex justify-content-center align-items-center"
+            >
+              <img
+                class="p-5 w-h-200"
+                src="https://sinpin1.com.tw/asset/images/item/uploaded/20221004113851_1664854731633baacbe88c22.52964941.webp"
+                alt=""
+              />
+            </div>
+            <div
+              class="col-12 col-md-8 d-flex flex-column justify-content-center mb-3 mb-md-0 ps-5"
+            >
+              <h3 class="1h-1">進口超耐磨木地板</h3>
+              <p class="fs-6">
+                歐美國家木地板的主流，底板材質為木屑熱壓處理而成(俗稱密集板MDF)，
+                其表面為印刷牛皮紙再塗三氧化二鋁(耐磨能力強)，以卡扣接合，鋪設時無須下釘，
+                擁有耐磨、低甲醛、不易有色差抗菌、拆卸容易、容易清理維護等優點。
+                其表面塗佈三氧化二鋁(為類紅寶石的分子結構)，所以耐磨度高。
+              </p>
+            </div>
+          </section>
+          <div class="d-flex justify-content-center pt-5">
+            <a class="btn btn-primary" href="#" role="button">Link Button</a>
+          </div>
+        </section>
+        <!-- 一張圖文說明 -->
+        <section class="row p-3 p-sm-5">
+          <div class="col-12 col-md-6">
+            <img
+              class="mb-3 w-100 h-100 object-fit-cover"
+              src="https://www.ikea.com/ext/ingkadam/m/3fd10c8a3e4ad398/original/PH199052.jpg?f=s"
+              alt=""
+            />
+          </div>
+          <div
+            class="col-12 col-md-6 d-flex flex-column justify-content-center mb-3 mb-md-0 ps-3"
+          >
+            <p class="fs-5">Brand</p>
+            <p class="fs-3 1h-1">河畔絢縵之家</p>
+            <div class="row">
+              <div class="col-6 col-sm-8 col-lg-6 col-xxl-5">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                &nbsp;
+                <span>4 Reviews</span>
+              </div>
+              <div class="col-2">
+                <ul class="list-unstyled d-flex justify-content-center">
+                  <li class="">
+                    <a class="text-body-secondary" href="#">
+                      <i class="bi bi-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="text-body-secondary" href="#">
+                      <i class="bi bi-instagram px-2"></i
+                    ></a>
+                  </li>
+                  <li class="">
+                    <a class="text-body-secondary" href="#">
+                      <i class="bi bi-facebook"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="fs-6 mb-5">
+              每座迷人的城市總有一條美麗河流相伴。位在澳洲東部的布里斯本是座歷史悠久的城市，而為其帶來生命泉源的即是布里斯本河。本案住宅坐落在布里斯本河河畔，透過古典與現代元素的結合，打造出古色古香的現代居住空間。
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-9 col-lg-6 d-flex">
+                <span class="fs-6 pe-3">Color</span>
+                <div
+                  class="my-color-ball border rounded-circle bg-danger"
+                ></div>
+                <div class="my-color-ball border rounded-circle bg-info"></div>
+                <div
+                  class="my-color-ball border rounded-circle bg-success"
+                ></div>
+              </div>
+              <div class="col-3 d-flex">
+                <span class="fs-6 me-2">Size</span>
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-light dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    請選擇
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <button class="dropdown-item" type="button">S</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">M</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" type="button">L</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row d-flex justify-content-between">
+              <div class="col">
+                <span class="fs-4">$ 158800</span>
+              </div>
+              <div class="col-5 col-md-4 col-xxl-3">
+                <a class="btn btn-primary" href="#" role="button"> Button</a>
+                &nbsp;
+                <span class="">
+                  <i class="bi bi-heart-fill"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 八張卡片 -->
+        <section class="p-3 p-sm-5">
+          <h2 class="text-center">精品磁磚系列</h2>
+          <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3">
+            <div class="col">
+              <img
+                class="p-1 w-100"
+                src="https://www.pdh.com.tw/content/images/2022/01/series-9.jpg"
+                alt=""
+              />
+              <div class="p-2 fs-6">
+                <p class="m-0">米瑞石_格羅系列</p>
+                <p class="m-0">60X60cm</p>
+                <p class="m-0">$1700</p>
+              </div>
+            </div>
+            <div class="col">
+              <img
+                class="p-1 w-100"
+                src="https://www.pdh.com.tw/content/images/2024/06/series-3.jpg"
+                alt=""
+              />
+              <div class="p-2 fs-6">
+                <p class="m-0">恆儷系列</p>
+                <p class="m-0">60X60cm</p>
+                <p class="m-0">$1700</p>
+              </div>
+            </div>
+            <div class="col">
+              <img
+                class="p-1 w-100"
+                src="https://www.pdh.com.tw/content/images/2024/06/series-2.jpg"
+                alt=""
+              />
+              <div class="p-2 fs-6">
+                <p class="m-0">勃根地系列</p>
+                <p class="m-0">30X30cm</p>
+                <p class="m-0">$2300</p>
+              </div>
+            </div>
+            <div class="col">
+              <img
+                class="p-1 w-100"
+                src="https://www.pdh.com.tw/content/images/2024/06/series.jpg"
+                alt=""
+              />
+              <div class="p-2 fs-6">
+                <p class="m-0">多斯卡系列</p>
+                <p class="m-0">30X30cm</p>
+                <p class="m-0">$2300</p>
+              </div>
+            </div>
+            <div class="col">
+              <img
+                class="p-1 w-100"
+                src="https://www.pdh.com.tw/content/images/2024/05/series.jpg"
+                alt=""
+              />
+              <div class="p-2 fs-6">
+                <p class="m-0">艾瑪系列</p>
+                <p class="m-0">60X30cm</p>
+                <p class="m-0">$3300</p>
+              </div>
+            </div>
+            <div class="col">
+              <img
+                class="p-1 w-100"
+                src="https://www.pdh.com.tw/content/images/2024/05/series-2.jpg"
+                alt=""
+              />
+              <div class="p-2 fs-6">
+                <p class="m-0">元宇宙系列</p>
+                <p class="m-0">30X30cm</p>
+                <p class="m-0">$1500</p>
+              </div>
+            </div>
+            <div class="col">
+              <img
+                class="p-1 w-100"
+                src="https://www.pdh.com.tw/content/images/2024/04/series-1.jpg"
+                alt=""
+              />
+              <div class="p-2 fs-6">
+                <p class="m-0">凱爾萊姆石系列</p>
+                <p class="m-0">60X60cm</p>
+                <p class="m-0">$4500</p>
+              </div>
+            </div>
+            <div class="col">
+              <img
+                class="p-1 w-100"
+                src="https://www.pdh.com.tw/content/images/2022/02/series-4.jpg"
+                alt=""
+              />
+              <div class="p-2 fs-6">
+                <p class="m-0">伊利雅</p>
+                <p class="m-0">15X15cm</p>
+                <p class="m-0">$2500</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- 地圖留言 -->
+      <section class="position-relative">
+        <!-- <img class="w-100 object-fit-cover" src="./img/graymap.jpg" alt="" /> -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29169.178091066722!2d120.6667953368444!3d23.9552322316914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693049b9d7cf8d%3A0x1862e58dc72675dc!2zNTQw5Y2X5oqV57ij5Y2X5oqV5biC5Lit6IiI5paw5p2R!5e0!3m2!1szh-TW!2stw!4v1721266703158!5m2!1szh-TW!2stw"
+          width="100%"
+          height="450"
+          style="border: 0; filter: grayscale(1) contrast(1.2) opacity(0.7)"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <!-- d-none d-md-block -->
+        <form class="p-3 my-commentbox w-40 border bg-info-subtle">
+          <div class="mb-3">
+            <p class="fs-4">Feedback</p>
+            <div class="mb-3">
+              <label for="inputEmail1" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail1"
+                aria-describedby="emailHelp"
+                required
+              />
+              <div class="invalid-feedback">請填寫信箱！</div>
+            </div>
+            <div class="mb-3">
+              <label for="textarea" class="form-label">Example textarea</label>
+              <textarea
+                class="form-control"
+                id="textarea"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <button
+            class="btn btn-primary w-100 px-4 d-flex justify-content-center"
+            type="submit"
+          >
+            送出
+          </button>
+        </form>
+        <form class="d-block d-md-none px-5 py-3 w-100 border bg-info-subtle">
+          <div class="mb-3">
+            <p class="fs-4">Feedback</p>
+            <div class="mb-3">
+              <label for="inputEmail1" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail1"
+                aria-describedby="emailHelp"
+                required
+              />
+              <div class="invalid-feedback">請填寫信箱！</div>
+            </div>
+            <div class="mb-3">
+              <label for="textarea" class="form-label">建議</label>
+              <textarea
+                class="form-control"
+                id="textarea"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <button
+            class="btn btn-primary w-100 px-4 d-flex justify-content-center"
+            type="submit"
+          >
+            送出
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bg-info-subtle">
+      <div class="container">
+        <section
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-5 pt-5 border-top"
+        >
+          <div class="col col-md-12 mb-3">
+            <a
+              href="#"
+              class="d-flex align-items-center justify-content-center mb-3 link-body-emphasis text-decoration-none"
+            >
+              <img
+                src="./img/bee.jpg"
+                alt="Logo"
+                width="50"
+                height="50"
+                style="border-radius: 50%"
+                class="d-inline-block align-text-top me-3"
+              />
+            </a>
+            <p class="text-body-secondary text-center">回巢選材</p>
+            <p class="text-body-secondary text-center">一起組建家</p>
+          </div>
+
+          <div class="col mb-3 text-center">
+            <h5>關於回巢</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >最新消息</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >得獎紀錄</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >案例分享</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >小達人體驗營</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3 text-center">
+            <h5>商品項目</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >建材與地材</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >消防器材</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >牆面與軟裝</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >磁磚與薄板</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >廚具與衛浴</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3 text-center">
+            <h5>工項資訊</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >泥做工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >木作工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >水電工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >磁磚工程</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col mb-3 text-center">
+            <h5>工項資訊</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >壁紙工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >油漆工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >貼膜工程</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >玻璃工程</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="container-fluid bg-info pt-3">
+        <div class="container">
+          <section class="row">
+            <div class="co-12 mb-1 ps-3">
+              <h5 class="my-text-center justify-content text-center">
+                聯絡我們 Contact Us
+              </h5>
+              <ul class="nav justify-content-evenly text-start">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link px-2 text-body-secondary"
+                    >地址：100223臺北市中正區寶慶路3號</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link px-2 text-body-secondary"
+                    >TEL：02-2316-5300&nbsp;&nbsp;&nbsp;FAX：02-2316-5300</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link px-2 text-body-secondary"
+                    >服務時間：上班日8:00至18:00</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link px-2 text-body-secondary"
+                    >信箱：bee-materials@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section
+            class="d-flex flex-wrap justify-content-between align-items-center py-1 border-top"
+          >
+            <div class="col-8 col-lg-4 d-flex align-items-center">
+              <a
+                href="/"
+                class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+              >
+                <svg class="bi" width="30" height="24"></svg>
+              </a>
+              <span class="mb-3 mb-md-0 text-body-secondary"
+                >&copy; 2024 Bee-Materials Co., Ltd.</span
+              >
+            </div>
+
+            <ul
+              class="nav col-4 col-lg-4 justify-content-end list-unstyled d-flex"
+            >
+              <li class="ms-3">
+                <a class="text-body-secondary" href="#"
+                  ><svg class="bi" width="24" height="24">
+                    <i class="bi bi-twitter"></i></svg
+                ></a>
+              </li>
+              <li class="ms-3">
+                <a class="text-body-secondary" href="#"
+                  ><svg class="bi" width="24" height="24">
+                    <i class="bi bi-instagram"></i></svg
+                ></a>
+              </li>
+              <li class="ms-3">
+                <a class="text-body-secondary" href="#"
+                  ><svg class="bi" width="24" height="24">
+                    <i class="bi bi-facebook"></i></svg
+                ></a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
